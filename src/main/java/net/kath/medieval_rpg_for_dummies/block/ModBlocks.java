@@ -1,6 +1,7 @@
 package net.kath.medieval_rpg_for_dummies.block;
 
 import net.kath.medieval_rpg_for_dummies.MedievalRpgMod;
+import net.kath.medieval_rpg_for_dummies.block.custom.JumpyBlock;
 import net.kath.medieval_rpg_for_dummies.item.ModCreativeModeTab;
 import net.kath.medieval_rpg_for_dummies.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -43,6 +44,13 @@ public class ModBlocks {
                   .strength(6.0f)
                   .requiresCorrectToolForDrops(),
                   UniformInt.of(3, 7)
+          ), ModCreativeModeTab.MEDIEVAL_RPG_FOR_DUMMIES_TAB);
+
+  public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
+          () -> new JumpyBlock(BlockBehaviour.Properties
+                  .of(Material.STONE)
+                  .strength(6.0f)
+                  .requiresCorrectToolForDrops()
           ), ModCreativeModeTab.MEDIEVAL_RPG_FOR_DUMMIES_TAB);
 
   public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab modeTab) {
