@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+      "###",
+      "###",
+      "###"
+  ],
+  "key": {
+    "#": {
+      "item": "medieval_rpg_for_dummies:goslim"
+    }
+  },
+  "result": {
+    "item": "medieval_rpg_for_dummies:goslim_block",
+    "count": 1
+  }
+}

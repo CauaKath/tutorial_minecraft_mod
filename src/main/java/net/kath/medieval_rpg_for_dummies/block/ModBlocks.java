@@ -25,14 +25,14 @@ public class ModBlocks {
   public static final RegistryObject<Block> GOSLIM_BLOCK = registerBlock("goslim_block",
           () -> new Block(BlockBehaviour.Properties
                   .of(Material.STONE)
-                  .strength(1.0f)
+                  .strength(6.0f)
                   .requiresCorrectToolForDrops()
           ), ModCreativeModeTab.MEDIEVAL_RPG_FOR_DUMMIES_TAB);
 
   public static final RegistryObject<Block> GOSLIM_ORE = registerBlock("goslim_ore",
           () -> new DropExperienceBlock(BlockBehaviour.Properties
                   .of(Material.STONE)
-                  .strength(1.0f)
+                  .strength(6.0f)
                   .requiresCorrectToolForDrops(),
                   UniformInt.of(3, 7)
           ), ModCreativeModeTab.MEDIEVAL_RPG_FOR_DUMMIES_TAB);
@@ -40,7 +40,7 @@ public class ModBlocks {
   public static final RegistryObject<Block> DEEPSLATE_GOSLIM_ORE = registerBlock("deepslate_goslim_ore",
           () -> new DropExperienceBlock(BlockBehaviour.Properties
                   .of(Material.STONE)
-                  .strength(1.0f)
+                  .strength(6.0f)
                   .requiresCorrectToolForDrops(),
                   UniformInt.of(3, 7)
           ), ModCreativeModeTab.MEDIEVAL_RPG_FOR_DUMMIES_TAB);
