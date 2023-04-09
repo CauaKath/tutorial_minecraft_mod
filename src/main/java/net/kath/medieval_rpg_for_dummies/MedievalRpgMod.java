@@ -1,11 +1,8 @@
 package net.kath.medieval_rpg_for_dummies;
 
 import com.mojang.logging.LogUtils;
-<<<<<<< Updated upstream
-=======
 import net.kath.medieval_rpg_for_dummies.block.ModBlocks;
 import net.kath.medieval_rpg_for_dummies.item.ModItems;
->>>>>>> Stashed changes
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -26,12 +23,9 @@ public class MedievalRpgMod {
     public MedievalRpgMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-<<<<<<< Updated upstream
-=======
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
->>>>>>> Stashed changes
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
