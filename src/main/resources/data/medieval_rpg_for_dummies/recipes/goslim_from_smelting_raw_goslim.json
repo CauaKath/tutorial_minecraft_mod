@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "goslim",
+  "ingredient": {
+      "item": "medieval_rpg_for_dummies:raw_goslim"
+  },
+  "result": "medieval_rpg_for_dummies:goslim"
+}

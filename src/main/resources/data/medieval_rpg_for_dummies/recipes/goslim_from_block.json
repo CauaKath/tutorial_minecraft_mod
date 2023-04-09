@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "medieval_rpg_for_dummies:goslim_block"
+    }
+  ],
+  "result": {
+    "item": "medieval_rpg_for_dummies:goslim",
+    "count": 9
+  }
+}
