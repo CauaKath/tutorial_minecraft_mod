@@ -1,6 +1,7 @@
 package net.kath.medieval_rpg_for_dummies.block;
 
 import net.kath.medieval_rpg_for_dummies.MedievalRpgMod;
+import net.kath.medieval_rpg_for_dummies.block.custom.GoslimLampBlock;
 import net.kath.medieval_rpg_for_dummies.block.custom.JumpyBlock;
 import net.kath.medieval_rpg_for_dummies.item.ModCreativeModeTab;
 import net.kath.medieval_rpg_for_dummies.item.ModItems;
@@ -51,6 +52,14 @@ public class ModBlocks {
                   .of(Material.STONE)
                   .strength(6.0f)
                   .requiresCorrectToolForDrops()
+          ), ModCreativeModeTab.MEDIEVAL_RPG_FOR_DUMMIES_TAB);
+
+  public static final RegistryObject<Block> GOSLIM_LAMP = registerBlock("goslim_lamp",
+          () -> new GoslimLampBlock(BlockBehaviour.Properties
+                  .of(Material.STONE)
+                  .strength(6.0f)
+                  .requiresCorrectToolForDrops()
+                  .lightLevel(state -> state.getValue(GoslimLampBlock.LIT) ? 15 : 0)
           ), ModCreativeModeTab.MEDIEVAL_RPG_FOR_DUMMIES_TAB);
 
   public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab modeTab) {
