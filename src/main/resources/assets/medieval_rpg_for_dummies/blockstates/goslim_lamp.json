@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=true": { "model": "medieval_rpg_for_dummies:block/goslim_lamp_on" },
+    "lit=false": { "model": "medieval_rpg_for_dummies:block/goslim_lamp_off" }
+  }
+}
