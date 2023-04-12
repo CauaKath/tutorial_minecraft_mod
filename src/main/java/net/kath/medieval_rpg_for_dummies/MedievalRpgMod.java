@@ -3,6 +3,8 @@ package net.kath.medieval_rpg_for_dummies;
 import com.mojang.logging.LogUtils;
 import net.kath.medieval_rpg_for_dummies.block.ModBlocks;
 import net.kath.medieval_rpg_for_dummies.item.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -39,7 +41,6 @@ public class MedievalRpgMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
         }
     }
 }
