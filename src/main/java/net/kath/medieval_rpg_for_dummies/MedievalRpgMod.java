@@ -3,6 +3,7 @@ package net.kath.medieval_rpg_for_dummies;
 import com.mojang.logging.LogUtils;
 import net.kath.medieval_rpg_for_dummies.block.ModBlocks;
 import net.kath.medieval_rpg_for_dummies.item.ModItems;
+import net.kath.medieval_rpg_for_dummies.painting.ModPaintings;
 import net.kath.medieval_rpg_for_dummies.villager.ModVillagers;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -30,6 +31,7 @@ public class MedievalRpgMod {
         ModBlocks.register(modEventBus);
 
         ModVillagers.register(modEventBus);
+        ModPaintings.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
