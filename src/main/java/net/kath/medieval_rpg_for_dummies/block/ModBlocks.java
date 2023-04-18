@@ -49,6 +49,22 @@ public class ModBlocks {
                   UniformInt.of(3, 7)
           ), ModCreativeModeTab.MEDIEVAL_RPG_FOR_DUMMIES_TAB);
 
+  public static final RegistryObject<Block> NETHERRACK_GOSLIM_ORE = registerBlock("netherrack_goslim_ore",
+          () -> new DropExperienceBlock(BlockBehaviour.Properties
+                  .of(Material.STONE)
+                  .strength(6.0f)
+                  .requiresCorrectToolForDrops(),
+                  UniformInt.of(3, 7)
+          ), ModCreativeModeTab.MEDIEVAL_RPG_FOR_DUMMIES_TAB);
+
+  public static final RegistryObject<Block> ENDSTONE_GOSLIM_ORE = registerBlock("endstone_goslim_ore",
+          () -> new DropExperienceBlock(BlockBehaviour.Properties
+                  .of(Material.STONE)
+                  .strength(6.0f)
+                  .requiresCorrectToolForDrops(),
+                  UniformInt.of(3, 7)
+          ), ModCreativeModeTab.MEDIEVAL_RPG_FOR_DUMMIES_TAB);
+
   public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
           () -> new JumpyBlock(BlockBehaviour.Properties
                   .of(Material.STONE)
