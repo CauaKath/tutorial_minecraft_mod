@@ -5,6 +5,8 @@ import net.kath.medieval_rpg_for_dummies.block.ModBlocks;
 import net.kath.medieval_rpg_for_dummies.item.ModItems;
 import net.kath.medieval_rpg_for_dummies.painting.ModPaintings;
 import net.kath.medieval_rpg_for_dummies.villager.ModVillagers;
+import net.kath.medieval_rpg_for_dummies.world.feature.ModConfiguredFeatures;
+import net.kath.medieval_rpg_for_dummies.world.feature.ModPlacedFeatures;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
@@ -32,6 +34,9 @@ public class MedievalRpgMod {
 
         ModVillagers.register(modEventBus);
         ModPaintings.register(modEventBus);
+
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
