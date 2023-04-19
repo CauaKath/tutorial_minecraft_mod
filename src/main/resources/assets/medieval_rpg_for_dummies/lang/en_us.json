@@ -16,5 +16,8 @@
 
   "entity.minecraft.villager.medieval_rpg_for_dummies.jump_master": "Jump Master",
 
+  "key.category.medieval_rpg_for_dummies.tutorial": "Medieval RPG for Dummies Category",
+  "key.medieval_rpg_for_dummies.drink_water": "Drink Water",
+
   "itemGroup.medieval_rpg_for_dummies": "Medieval RPG for Dummies"
 }
