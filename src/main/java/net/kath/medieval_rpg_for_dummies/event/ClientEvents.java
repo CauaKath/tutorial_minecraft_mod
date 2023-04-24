@@ -1,6 +1,9 @@
 package net.kath.medieval_rpg_for_dummies.event;
 
 import net.kath.medieval_rpg_for_dummies.MedievalRpgMod;
+import net.kath.medieval_rpg_for_dummies.networking.ModMessages;
+import net.kath.medieval_rpg_for_dummies.networking.packet.C2SPacket;
+import net.kath.medieval_rpg_for_dummies.networking.packet.DrinkWaterC2SPacket;
 import net.kath.medieval_rpg_for_dummies.util.KeyBinding;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
@@ -20,7 +23,7 @@ public class ClientEvents {
       if (KeyBinding.DRINKING_KEY.consumeClick()) {
         if (Minecraft.getInstance().player == null) return;
 
-        Minecraft.getInstance().player.sendSystemMessage(Component.literal("You pressed the key!"));
+        ModMessages.sendToServer(new DrinkWaterC2SPacket());
       }
     }
 

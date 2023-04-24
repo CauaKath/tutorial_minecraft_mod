@@ -19,5 +19,8 @@
   "key.category.medieval_rpg_for_dummies.tutorial": "Medieval RPG for Dummies Category",
   "key.medieval_rpg_for_dummies.drink_water": "Drink Water",
 
+  "message.medieval_rpg_for_dummies.drink_water": "You drank water!",
+  "message.medieval_rpg_for_dummies.no_water": "There is no water nearby!",
+
   "itemGroup.medieval_rpg_for_dummies": "Medieval RPG for Dummies"
 }

@@ -3,6 +3,7 @@ package net.kath.medieval_rpg_for_dummies;
 import com.mojang.logging.LogUtils;
 import net.kath.medieval_rpg_for_dummies.block.ModBlocks;
 import net.kath.medieval_rpg_for_dummies.item.ModItems;
+import net.kath.medieval_rpg_for_dummies.networking.ModMessages;
 import net.kath.medieval_rpg_for_dummies.painting.ModPaintings;
 import net.kath.medieval_rpg_for_dummies.villager.ModVillagers;
 import net.kath.medieval_rpg_for_dummies.world.feature.ModConfiguredFeatures;
@@ -45,6 +46,8 @@ public class MedievalRpgMod {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(ModVillagers::registerPOIs);
+
+        ModMessages.register();
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
