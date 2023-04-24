@@ -3,6 +3,7 @@ package net.kath.medieval_rpg_for_dummies.networking;
 import net.kath.medieval_rpg_for_dummies.MedievalRpgMod;
 import net.kath.medieval_rpg_for_dummies.networking.packet.C2SPacket;
 import net.kath.medieval_rpg_for_dummies.networking.packet.DrinkWaterC2SPacket;
+import net.kath.medieval_rpg_for_dummies.networking.packet.ThirstDataSyncS2CPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkDirection;
@@ -39,6 +40,12 @@ public class ModMessages {
             .encoder(DrinkWaterC2SPacket::toBytes)
             .decoder(DrinkWaterC2SPacket::new)
             .consumerMainThread(DrinkWaterC2SPacket::handle)
+            .add();
+
+    net.messageBuilder(ThirstDataSyncS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+            .encoder(ThirstDataSyncS2CPacket::toBytes)
+            .decoder(ThirstDataSyncS2CPacket::new)
+            .consumerMainThread(ThirstDataSyncS2CPacket::handle)
             .add();
   }
 
