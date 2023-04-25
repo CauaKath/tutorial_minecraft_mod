@@ -2,6 +2,8 @@ package net.kath.medieval_rpg_for_dummies;
 
 import com.mojang.logging.LogUtils;
 import net.kath.medieval_rpg_for_dummies.block.ModBlocks;
+import net.kath.medieval_rpg_for_dummies.fluid.ModFluidTypes;
+import net.kath.medieval_rpg_for_dummies.fluid.ModFluids;
 import net.kath.medieval_rpg_for_dummies.item.ModItems;
 import net.kath.medieval_rpg_for_dummies.networking.ModMessages;
 import net.kath.medieval_rpg_for_dummies.painting.ModPaintings;
@@ -39,21 +41,27 @@ public class MedievalRpgMod {
         ModConfiguredFeatures.register(modEventBus);
         ModPlacedFeatures.register(modEventBus);
 
+        ModFluids.register(modEventBus);
+        ModFluidTypes.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(ModVillagers::registerPOIs);
-
-        ModMessages.register();
+        event.enqueueWork(() -> {
+            ModMessages.register();
+            ModVillagers.registerPOIs();
+        });
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_SOAP_WATER.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_SOAP_WATER.get(), RenderType.translucent());
         }
     }
 }
