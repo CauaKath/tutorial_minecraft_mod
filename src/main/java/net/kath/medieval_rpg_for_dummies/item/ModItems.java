@@ -5,10 +5,7 @@ import net.kath.medieval_rpg_for_dummies.block.ModBlocks;
 import net.kath.medieval_rpg_for_dummies.fluid.ModFluids;
 import net.kath.medieval_rpg_for_dummies.item.custom.EightBallItem;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BucketItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -38,6 +35,9 @@ public class ModItems {
   public static final RegistryObject<Item> SOAP_WATER_BUCKET = ITEMS.register("soap_water_bucket",
           () -> new BucketItem(ModFluids.SOURCE_SOAP_WATER, new Item.Properties()
                   .tab(ModCreativeModeTab.MEDIEVAL_RPG_FOR_DUMMIES_TAB).craftRemainder(Items.BUCKET).stacksTo(1)));
+
+  public static final RegistryObject<Item> KATH_SWORD = ITEMS.register("kath_sword",
+          () -> new SwordItem(Tiers.DIAMOND, 10, 5f, new Item.Properties().tab(ModCreativeModeTab.MEDIEVAL_RPG_FOR_DUMMIES_TAB).stacksTo(1)));
 
   public static void register(IEventBus eventBus) {
     ITEMS.register(eventBus);
