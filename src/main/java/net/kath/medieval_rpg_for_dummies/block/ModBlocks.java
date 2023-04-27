@@ -2,6 +2,7 @@ package net.kath.medieval_rpg_for_dummies.block;
 
 import net.kath.medieval_rpg_for_dummies.MedievalRpgMod;
 import net.kath.medieval_rpg_for_dummies.block.custom.BlueberryCropBlock;
+import net.kath.medieval_rpg_for_dummies.block.custom.GemInfusingStationBlock;
 import net.kath.medieval_rpg_for_dummies.block.custom.GoslimLampBlock;
 import net.kath.medieval_rpg_for_dummies.block.custom.JumpyBlock;
 import net.kath.medieval_rpg_for_dummies.fluid.ModFluids;
@@ -87,6 +88,14 @@ public class ModBlocks {
 
   public static final RegistryObject<LiquidBlock> SOAP_WATER_BLOCK = BLOCKS.register("soap_water_block",
           () -> new LiquidBlock(ModFluids.SOURCE_SOAP_WATER, BlockBehaviour.Properties.copy(Blocks.WATER)));
+
+  public static final RegistryObject<Block> GEM_INFUSING_STATION = registerBlock("gem_infusing_station",
+          () -> new GemInfusingStationBlock(BlockBehaviour.Properties
+                  .of(Material.METAL)
+                  .strength(6.0f)
+                  .requiresCorrectToolForDrops()
+                  .noOcclusion()
+          ), ModCreativeModeTab.MEDIEVAL_RPG_FOR_DUMMIES_TAB);
 
   public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab modeTab) {
     RegistryObject<T> toReturn = BLOCKS.register(name, block);

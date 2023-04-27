@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "medieval_rpg_for_dummies:block/gem_infusing_station"
+    },
+    "facing=south": {
+      "model": "medieval_rpg_for_dummies:block/gem_infusing_station",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "medieval_rpg_for_dummies:block/gem_infusing_station",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "medieval_rpg_for_dummies:block/gem_infusing_station",
+      "y": 90
+    }
+  }
+}
