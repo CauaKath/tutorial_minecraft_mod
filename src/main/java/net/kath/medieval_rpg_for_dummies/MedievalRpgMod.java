@@ -2,14 +2,18 @@ package net.kath.medieval_rpg_for_dummies;
 
 import com.mojang.logging.LogUtils;
 import net.kath.medieval_rpg_for_dummies.block.ModBlocks;
+import net.kath.medieval_rpg_for_dummies.entity.ModBlockEntities;
 import net.kath.medieval_rpg_for_dummies.fluid.ModFluidTypes;
 import net.kath.medieval_rpg_for_dummies.fluid.ModFluids;
 import net.kath.medieval_rpg_for_dummies.item.ModItems;
 import net.kath.medieval_rpg_for_dummies.networking.ModMessages;
 import net.kath.medieval_rpg_for_dummies.painting.ModPaintings;
+import net.kath.medieval_rpg_for_dummies.screen.GemInfusingStationScreen;
+import net.kath.medieval_rpg_for_dummies.screen.ModMenuTypes;
 import net.kath.medieval_rpg_for_dummies.villager.ModVillagers;
 import net.kath.medieval_rpg_for_dummies.world.feature.ModConfiguredFeatures;
 import net.kath.medieval_rpg_for_dummies.world.feature.ModPlacedFeatures;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,6 +38,7 @@ public class MedievalRpgMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
         ModVillagers.register(modEventBus);
         ModPaintings.register(modEventBus);
@@ -43,6 +48,8 @@ public class MedievalRpgMod {
 
         ModFluids.register(modEventBus);
         ModFluidTypes.register(modEventBus);
+
+        ModMenuTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -62,6 +69,8 @@ public class MedievalRpgMod {
         public static void onClientSetup(FMLClientSetupEvent event) {
             ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_SOAP_WATER.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_SOAP_WATER.get(), RenderType.translucent());
+
+            MenuScreens.register(ModMenuTypes.GEM_INFUSING_STATION_MENU.get(), GemInfusingStationScreen::new);
         }
     }
 }
